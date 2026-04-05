@@ -1,35 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
 
 export function EducationSection() {
   const educations = [
     {
       degree: "MSc in Waste Management",
       institution: "RUDN University",
-      period: "2024 – Present (Ongoing)",
-      description: "Specializing in sustainable urban waste disposal systems and environmental impact analysis.",
+      location: "Moscow, Russia",
+      period: "2024 – Present",
+      description: "Specializing in sustainable urban waste disposal systems, circular economy models, and environmental impact analysis.",
+      achievements: ["Research Excellence", "Sustainability Focus"],
       icon: GraduationCap,
     },
     {
       degree: "BSc in Environmental Engineering",
       institution: "RUDN University",
+      location: "Moscow, Russia",
       period: "2019 – 2023",
-      description: "Foundation in ecological models, engineering principles, and environmental data analysis.",
+      description: "Foundation in ecological models, engineering principles, and environmental data analysis. Graduated with honors.",
+      achievements: ["Top Percentile", "Lab Assistant"],
       icon: GraduationCap,
     }
   ];
 
   return (
-    <section id="education" className="py-24 bg-card">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="education" className="section-padding bg-slate-50/50 dark:bg-transparent relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Education</h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded-full" />

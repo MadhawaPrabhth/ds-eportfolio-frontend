@@ -1,37 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Calendar, MapPin, CheckCircle2, Clock } from "lucide-react";
 
 export function ExperienceSection() {
   const experiences = [
     {
       role: "Official Translator",
-      organization: "High Court of Nikulinsky Rayon, Moscow",
+      organization: "High Court of Nikulinsky Rayon",
+      location: "Moscow, Russia",
       period: "Sep 2025 – Present",
       status: "Present",
-      description: "Providing certified translation services for environmental and legal documentations.",
+      description: "Providing certified translation services for environmental and legal documentations, bridging linguistic gaps in scientific litigation.",
       icon: Briefcase,
     },
     {
       role: "Administrative Office Assistant",
-      organization: "Peoples' Friendship University of Russia (RUDN)",
+      organization: "RUDN University",
+      location: "International Ecology Dept.",
       period: "Jan 2026 – Present",
       status: "Present",
-      description: "Managing administrative processes for the international ecology department.",
+      description: "Managing complex administrative processes and coordinating international research initiatives for the ecology department.",
       icon: Briefcase,
     },
     {
       role: "Laboratory Assistant",
       organization: "RUDN University",
+      location: "Ecological Lab",
       period: "Mar 2026 – Present",
       status: "Present",
-      description: "Assisting in critical ecological tests, preparing samples, and maintaining laboratory equipment.",
+      description: "Assisting in critical ecological tests, preparing complex chemical samples, and maintaining state-of-the-art laboratory equipment.",
       icon: Briefcase,
     },
     {
       role: "Research Intern",
       organization: "Ecological Faculty, RUDN",
+      location: "Urban Ecology Research",
       period: "Nov 2025 – Jan 2026",
       status: "Completed",
       description: "Analyzed local flora adaptations to urban pollution.",

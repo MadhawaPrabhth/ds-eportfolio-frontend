@@ -1,8 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
-import { EducationSection } from "@/components/EducationSection";
-import { ExperienceSection } from "@/components/ExperienceSection";
+import { ResumeSection } from "@/components/ResumeSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { ContactSection } from "@/components/ContactSection";
@@ -15,8 +14,7 @@ export default function Home() {
       <main className="flex-1 w-full flex flex-col">
         <HeroSection />
         <AboutSection />
-        <EducationSection />
-        <ExperienceSection />
+        <ResumeSection />
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />

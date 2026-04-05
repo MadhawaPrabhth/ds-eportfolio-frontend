@@ -8,6 +8,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Dinethri Sulakshani | Ecologist & Environmental Engineer",
   description: "Portfolio of Dinethri Sulakshani, an Ecologist and Environmental Engineer focused on Waste Management.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
