@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-eco-50: #f0fdf4;
+  --color-eco-100: #dcfce7;
+  --color-eco-200: #bbf7d0;
+  --color-eco-300: #86efac;
+  --color-eco-400: #4ade80;
+  --color-eco-500: #22c55e;
+  --color-eco-600: #16a34a;
+  --color-eco-700: #15803d;
+  --color-eco-800: #166534;
+  --color-eco-900: #14532d;
+  
+  --color-earth-50: #fbf8f3;
+  --color-earth-100: #f5efe6;
+  --color-earth-200: #eadbc4;
+  --color-earth-300: #dfc49e;
+  --color-earth-400: #d1a871;
+  --color-earth-500: #c5904d;
+  --color-earth-600: #b87b40;
+  --color-earth-700: #996037;
+  --color-earth-800: #7d4f31;
+  --color-earth-900: #65412a;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  :root {
+    --background: #fbfbfc; 
+    --foreground: #022c22;
+    --card: #ffffff;
+    --card-foreground: #022c22;
+    --border: #e2e8f0;
+    --primary: #059669;
+    --primary-foreground: #ffffff;
+    --secondary: #f0fdf4;
+    --secondary-foreground: #065f46;
+    --muted: #f8fafc;
+    --muted-foreground: #64748b;
+    --accent: #10b981;
+    --accent-foreground: #ffffff;
+  }
+  .dark {
+    --background: #020617; /* Deepest blue-black for depth */
+    --foreground: #f0fdfa;
+    --card: #0f172a; /* Slightly lighter surface */
+    --card-foreground: #f0fdfa;
+    --border: #1e293b;
+    --primary: #10b981; /* Emerald */
+    --primary-foreground: #020617;
+    --secondary: #0f172a;
+    --secondary-foreground: #34d399;
+    --muted: #020617;
+    --muted-foreground: #94a3b8;
+    --accent: #10b981;
+    --accent-foreground: #020617;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.03) 0px, transparent 50%),
+      radial-gradient(at 50% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.03) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  .dark body {
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.1) 0px, transparent 50%),
+      radial-gradient(at 50% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-eco-700);
+}
