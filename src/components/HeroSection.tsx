@@ -6,13 +6,13 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-22 lg:pt-20 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-1/4 blob animate-pulse opacity-50" />
       <div className="absolute bottom-0 right-1/4 blob animate-pulse opacity-30" style={{ animationDelay: '2s' }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
 
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -30,7 +30,7 @@ export function HeroSection() {
               <span>Engineering a Greener Future</span>
             </motion.div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight mb-8 leading-[1.1]">
+            <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight mb-4 leading-[1.1]">
               Hi, I&apos;m <span className="text-gradient">Dinethri</span> <br />
               <span className="text-3xl sm:text-4xl lg:text-5xl text-slate-600 dark:text-slate-400 font-light mt-4 block">
                 Ecologist & Environmental Engineer
@@ -77,7 +77,7 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="flex-1 flex justify-center lg:justify-end relative"
+            className="flex-1 flex justify-center lg:justify-end relative mt-12 lg:mt-0"
           >
             <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[480px] lg:h-[480px]">
               {/* Animated Rings */}
@@ -98,36 +98,36 @@ export function HeroSection() {
               </div>
 
               {/* Floating Badges - Moved outside overflow-hidden to prevent clipping */}
-              <motion.div 
-                 animate={{ y: [0, -15, 0], x: [0, 5, 0] }}
-                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                 className="absolute -top-6 -right-10 glass p-5 rounded-3xl shadow-2xl z-20 hidden lg:block border border-white/40 dark:border-white/10"
+              <motion.div
+                animate={{ y: [0, -15, 0], x: [0, 5, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -top-6 -right-10 glass p-5 rounded-3xl shadow-2xl z-20 hidden lg:block border border-white/40 dark:border-white/10"
               >
-                 <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
-                       <Globe size={24} />
-                    </div>
-                    <div>
-                       <p className="text-[10px] uppercase font-black tracking-[0.2em] text-slate-500 mb-0.5">Location</p>
-                       <p className="text-sm font-bold text-slate-900 dark:text-white">Global Presence</p>
-                    </div>
-                 </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                    <Globe size={24} />
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase font-black tracking-[0.2em] text-slate-500 mb-0.5">Location</p>
+                    <p className="text-sm font-bold text-slate-900 dark:text-white">Global Presence</p>
+                  </div>
+                </div>
               </motion.div>
 
-              <motion.div 
-                 animate={{ y: [0, 15, 0], x: [0, -5, 0] }}
-                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                 className="absolute -bottom-10 -left-10 glass p-5 rounded-3xl shadow-2xl z-20 hidden lg:block border border-white/40 dark:border-white/10"
+              <motion.div
+                animate={{ y: [0, 15, 0], x: [0, -5, 0] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute -bottom-10 -left-10 glass p-5 rounded-3xl shadow-2xl z-20 hidden lg:block border border-white/40 dark:border-white/10"
               >
-                 <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
-                       <Sparkles size={24} />
-                    </div>
-                    <div>
-                       <p className="text-[10px] uppercase font-black tracking-[0.2em] text-slate-500 mb-0.5">Status</p>
-                       <p className="text-sm font-bold text-slate-900 dark:text-white">Project Available</p>
-                    </div>
-                 </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                    <Sparkles size={24} />
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase font-black tracking-[0.2em] text-slate-500 mb-0.5">Status</p>
+                    <p className="text-sm font-bold text-slate-900 dark:text-white">Project Available</p>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </motion.div>
